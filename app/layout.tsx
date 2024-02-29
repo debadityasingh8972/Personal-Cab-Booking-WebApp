@@ -1,13 +1,14 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-import { ClerkProvider } from '@clerk/nextjs'
+import { Inter, Outfit, Raleway } from "next/font/google";
+import { ClerkProvider } from "@clerk/nextjs";
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"] });
+const outfit = Outfit({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Cab GO - Your Trusted cab Booking Platform",
-  description: "Book cabs easily with CABGO. Reliable service, affordable prices.",
+  description:
+    "Book cabs easily with CABGO. Reliable service, affordable prices.",
   keywords: "CABGO, CAB booking, transportation, taxi, travel",
   viewport: "width=device-width, initial-scale=1.0",
 };
@@ -20,7 +21,7 @@ export default function RootLayout({
   return (
     <ClerkProvider>
       <html lang="en">
-        <body className={inter.className}>{children}</body>
+        <body className={outfit.className}>{children}</body>
       </html>
     </ClerkProvider>
   );
